@@ -1,0 +1,23 @@
+[package]
+name = "connector-coinmarketcap"
+version = "0.1.0"
+edition = "2021"
+authors = ["gorin <mxmgorin@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+rust-extensions = { tag = "0.1.3", git = "https://github.com/MyJetTools/rust-extensions.git" }
+
+[dependencies]
+chrono = { version = "*", features = ["serde"] }
+http = "0.2"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+serde_derive = "*"
+serde_with = { version = "*", features = ["chrono"] }
+tokio = { version = "*", features = ["full"] }
+tokio-util = "*"
+async-trait = "*"
+futures = "*"
+future-utils = "*"
+reqwest = { version = "*", features = ["json"] }
+url = "*"
