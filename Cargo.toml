@@ -1,5 +1,5 @@
 [package]
-name = "connector-coinmarketcap"
+name = "connector-coingecko"
 version = "0.1.0"
 edition = "2021"
 authors = ["gorin <mxmgorin@gmail.com>"]
