@@ -14,6 +14,7 @@ pub struct Coin {
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MarketData {
     pub roi: Option<Roi>,
+    pub current_price: Option<PriceData>,
     pub market_cap: Option<PriceData>,
     pub fully_diluted_valuation: Option<PriceData>,
 }
