@@ -1,4 +1,4 @@
-mod rest_client;
+pub mod rest_client;
 mod enpoints;
 mod config;
 mod errors;

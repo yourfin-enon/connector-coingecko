@@ -7,5 +7,5 @@ pub struct Coin {
     #[serde(rename = "symbol")]
     pub symbol: String,
     #[serde(rename = "market_cap_rank")]
-    pub market_cap_rank: String,
+    pub market_cap_rank: i32,
 }

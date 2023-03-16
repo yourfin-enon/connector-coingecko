@@ -34,8 +34,8 @@ impl CoingeckoRestClient {
         query_params.insert("developer_data".into(), "false".to_string());
         query_params.insert("sparkline".into(), "false".to_string());
 
-        let url = format!("/{}{}", id.into(), self.build_query(query_params));
-        self.get(CoingeckoEnpoint::Coins, Some(url)).await
+        let query = self.build_query(query_params);
+        self.get(CoingeckoEnpoint::Coins, Some(id.into()), Some(query)).await
     }
 
     async fn get<T: DeserializeOwned>(
@@ -48,7 +48,7 @@ impl CoingeckoRestClient {
 
         if let Some(path) = path {
             if !path.is_empty() {
-                url.push_str(&path);
+                url.push_str(&format!("/{}", &path));
             }
         }
 

@@ -1,4 +1,13 @@
+use connector_coingecko::rest::rest_client::CoingeckoRestClient;
+
 #[tokio::main]
 async fn main() {
-    println!("empty rest example");
+    let client = CoingeckoRestClient::new(None);
+    let coin = client.get_coin("bitcoin").await;
+
+    if let Err(err) = coin {
+        println!("error: {err:?}");
+    } else {
+        println!("coin: {:?}", coin.unwrap());
+    }
 }
