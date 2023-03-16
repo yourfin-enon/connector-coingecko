@@ -21,7 +21,7 @@ pub struct MarketData {
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct PriceData {
-    pub usd: f64,
+    pub usd: Option<f64>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
